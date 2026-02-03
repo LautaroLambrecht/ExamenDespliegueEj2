@@ -1,13 +1,11 @@
 services:
   db:
     image: louta/sqlpinoteca:v1
-    container_name: sqlinacoteca
     ports:
       - "3306:3306"
 
   php:
     image: louta/phppinoteca:v1
-    container_name: pinacoteca
     ports:
       - "8080:80"
     depends_on:
